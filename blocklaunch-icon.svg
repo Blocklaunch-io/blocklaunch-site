@@ -1,30 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200" width="160" height="200">
-  <!-- connectors -->
-  <line x1="60" y1="178" x2="74" y2="148" stroke="#7c6bff" stroke-width="2" opacity="0.55"/>
-  <line x1="74" y1="148" x2="84" y2="117" stroke="#7c6bff" stroke-width="2" opacity="0.6"/>
-  <line x1="84" y1="117" x2="88" y2="84" stroke="#7c6bff" stroke-width="2" opacity="0.7"/>
-  <line x1="88" y1="84" x2="90" y2="50" stroke="#38bdf8" stroke-width="2" opacity="0.8"/>
-  <!-- side branches -->
-  <line x1="74" y1="148" x2="52" y2="139" stroke="#7c6bff" stroke-width="1.2" opacity="0.3"/>
-  <line x1="84" y1="117" x2="106" y2="122" stroke="#7c6bff" stroke-width="1.2" opacity="0.3"/>
-  <circle cx="52" cy="139" r="5" fill="#7c6bff" opacity="0.3"/>
-  <circle cx="106" cy="122" r="5" fill="#7c6bff" opacity="0.3"/>
-  <!-- hex node 1 - bottom -->
-  <polygon points="60,194 76,185 76,167 60,158 44,167 44,185" fill="#1a1a2e" stroke="#7c6bff" stroke-width="2"/>
-  <circle cx="60" cy="176" r="7" fill="#7c6bff"/>
-  <!-- hex node 2 -->
-  <polygon points="74,163 88,155 88,139 74,131 60,139 60,155" fill="#1a1a2e" stroke="#7c6bff" stroke-width="2"/>
-  <circle cx="74" cy="147" r="6" fill="#7c6bff" opacity="0.9"/>
-  <!-- hex node 3 -->
-  <polygon points="84,132 96,125 96,111 84,104 72,111 72,125" fill="#1a1a2e" stroke="#8b7bff" stroke-width="2"/>
-  <circle cx="84" cy="118" r="5" fill="#8b7bff"/>
-  <!-- hex node 4 -->
-  <polygon points="88,99 99,93 99,80 88,74 77,80 77,93" fill="#1a1a2e" stroke="#5ab4f0" stroke-width="2"/>
-  <circle cx="88" cy="86" r="4.5" fill="#5ab4f0"/>
-  <!-- hex node 5 - top launch -->
-  <polygon points="90,66 103,59 103,44 90,37 77,44 77,59" fill="#0c1a2e" stroke="#38bdf8" stroke-width="2.5"/>
-  <circle cx="90" cy="52" r="5.5" fill="#38bdf8"/>
-  <!-- launch arrow -->
-  <line x1="90" y1="37" x2="90" y2="18" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
-  <polyline points="84,25 90,17 96,25" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="120" height="100">
+  <line x1="22" y1="74" x2="38" y2="58" stroke="#7c6bff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <line x1="58" y1="48" x2="74" y2="28" stroke="#7c6bff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  <polygon points="14,68 22,73 22,83 14,88 6,83 6,73" fill="#7c6bff"/>
+  <polygon points="48,38 60,45 60,59 48,66 36,59 36,45" fill="#8b7bff"/>
+  <polygon points="84,14 98,22 98,38 84,46 70,38 70,22" fill="#38bdf8"/>
 </svg>

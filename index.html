@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BlockLaunch — Launch. Build. Own.</title>
-  <meta name="description" content="BlockLaunch sponsors College of the Ozarks students with real-world blockchain and fintech projects. Students ship functional software, keep their IP, and build a portfolio that speaks for itself." />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 200'><line x1='60' y1='178' x2='74' y2='148' stroke='%237c6bff' stroke-width='2' opacity='0.55'/><line x1='74' y1='148' x2='84' y2='117' stroke='%237c6bff' stroke-width='2' opacity='0.6'/><line x1='84' y1='117' x2='88' y2='84' stroke='%237c6bff' stroke-width='2' opacity='0.7'/><line x1='88' y1='84' x2='90' y2='50' stroke='%2338bdf8' stroke-width='2' opacity='0.8'/><polygon points='60,194 76,185 76,167 60,158 44,167 44,185' fill='%231a1a2e' stroke='%237c6bff' stroke-width='2'/><circle cx='60' cy='176' r='7' fill='%237c6bff'/><polygon points='74,163 88,155 88,139 74,131 60,139 60,155' fill='%231a1a2e' stroke='%237c6bff' stroke-width='2'/><circle cx='74' cy='147' r='6' fill='%237c6bff'/><polygon points='84,132 96,125 96,111 84,104 72,111 72,125' fill='%231a1a2e' stroke='%238b7bff' stroke-width='2'/><circle cx='84' cy='118' r='5' fill='%238b7bff'/><polygon points='88,99 99,93 99,80 88,74 77,80 77,93' fill='%231a1a2e' stroke='%235ab4f0' stroke-width='2'/><circle cx='88' cy='86' r='4.5' fill='%235ab4f0'/><polygon points='90,66 103,59 103,44 90,37 77,44 77,59' fill='%230c1a2e' stroke='%2338bdf8' stroke-width='2.5'/><circle cx='90' cy='52' r='5.5' fill='%2338bdf8'/><line x1='90' y1='37' x2='90' y2='18' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round'/><polyline points='84,25 90,17 96,25' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'/></svg>" />
+  <title>BlockLaunch — Build. Launch. Own.</title>
+  <meta name="description" content="BlockLaunch is a launchpad for young technology professionals who want to build enterprise-grade software using emerging technologies to solve real problems — and launch their careers doing it." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 100'><line x1='22' y1='74' x2='38' y2='58' stroke='%237c6bff' stroke-width='4' stroke-linecap='round' opacity='0.7'/><line x1='58' y1='48' x2='74' y2='28' stroke='%237c6bff' stroke-width='4' stroke-linecap='round' opacity='0.7'/><polygon points='14,68 22,73 22,83 14,88 6,83 6,73' fill='%237c6bff'/><polygon points='48,38 60,45 60,59 48,66 36,59 36,45' fill='%238b7bff'/><polygon points='84,14 98,22 98,38 84,46 70,38 70,22' fill='%2338bdf8'/></svg>" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -21,7 +21,6 @@
       --accent2: #a78bfa;
       --accent3: #38bdf8;
       --green: #34d399;
-      --amber: #fbbf24;
       --card: rgba(255,255,255,0.04);
       --card-hover: rgba(255,255,255,0.07);
       --radius: 12px;
@@ -29,278 +28,87 @@
     }
 
     html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
 
     /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 2rem; height: 64px;
-      background: rgba(10,10,18,0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-logo {
-      display: flex; align-items: center; gap: 10px;
-      font-size: 17px; font-weight: 600; letter-spacing: -0.3px;
-    }
-
-    .nav-logo svg { flex-shrink: 0; }
-
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 64px; background: rgba(10,10,18,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 600; letter-spacing: -0.3px; }
     .nav-links { display: flex; align-items: center; gap: 2rem; }
-
-    .nav-links a {
-      font-size: 14px; color: var(--muted);
-      transition: color 0.2s;
-    }
+    .nav-links a { font-size: 14px; color: var(--muted); transition: color 0.2s; }
     .nav-links a:hover { color: var(--text); }
-
-    .nav-cta {
-      background: var(--accent);
-      color: #fff !important;
-      font-size: 13px !important;
-      font-weight: 500;
-      padding: 7px 16px;
-      border-radius: 99px;
-    }
+    .nav-cta { background: var(--accent); color: #fff !important; font-size: 13px !important; font-weight: 500; padding: 7px 16px; border-radius: 99px; }
     .nav-cta:hover { opacity: 0.9; }
 
     /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      text-align: center;
-      padding: 6rem 1.5rem 4rem;
-      position: relative; overflow: hidden;
-    }
+    .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 6rem 1.5rem 4rem; position: relative; overflow: hidden; }
+    .hero-glow { position: absolute; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(ellipse, rgba(124,107,255,0.15) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -60%); pointer-events: none; }
+    .hero-glow2 { position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(ellipse, rgba(56,189,248,0.08) 0%, transparent 70%); top: 50%; left: 60%; transform: translate(-20%, -30%); pointer-events: none; }
 
-    .hero-glow {
-      position: absolute;
-      width: 600px; height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(ellipse, rgba(124,107,255,0.18) 0%, transparent 70%);
-      top: 50%; left: 50%; transform: translate(-50%, -60%);
-      pointer-events: none;
-    }
+    .badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--accent2); background: rgba(124,107,255,0.12); border: 1px solid rgba(124,107,255,0.25); padding: 5px 14px; border-radius: 99px; margin-bottom: 1.75rem; }
+    .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-    .hero-glow2 {
-      position: absolute;
-      width: 400px; height: 400px;
-      border-radius: 50%;
-      background: radial-gradient(ellipse, rgba(56,189,248,0.10) 0%, transparent 70%);
-      top: 50%; left: 50%; transform: translate(-20%, -30%);
-      pointer-events: none;
-    }
-
-    .badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 12px; font-weight: 500;
-      color: var(--accent2);
-      background: rgba(124,107,255,0.12);
-      border: 1px solid rgba(124,107,255,0.25);
-      padding: 5px 14px; border-radius: 99px;
-      margin-bottom: 1.75rem;
-    }
-
-    .badge-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--accent2);
-      animation: pulse 2s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    h1 {
-      font-size: clamp(2.4rem, 6vw, 4.2rem);
-      font-weight: 700;
-      letter-spacing: -1.5px;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      max-width: 800px;
-    }
-
-    h1 .grad {
-      background: linear-gradient(135deg, var(--accent2) 0%, var(--accent3) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-sub {
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: var(--muted);
-      max-width: 560px;
-      margin-bottom: 2.5rem;
-      line-height: 1.7;
-    }
-
+    h1 { font-size: clamp(2.4rem, 6vw, 4.4rem); font-weight: 700; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 1.5rem; max-width: 860px; }
+    h1 .grad { background: linear-gradient(135deg, var(--accent2) 0%, var(--accent3) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub { font-size: clamp(1rem, 2vw, 1.2rem); color: var(--muted); max-width: 600px; margin-bottom: 2.5rem; line-height: 1.75; }
     .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--accent);
-      color: #fff;
-      font-size: 15px; font-weight: 500;
-      padding: 12px 28px; border-radius: 99px;
-      transition: opacity 0.2s, transform 0.15s;
-    }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #fff; font-size: 15px; font-weight: 500; padding: 12px 28px; border-radius: 99px; transition: opacity 0.2s, transform 0.15s; }
     .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
-
-    .btn-secondary {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--border2);
-      color: var(--text);
-      font-size: 15px; font-weight: 500;
-      padding: 12px 28px; border-radius: 99px;
-      transition: background 0.2s, transform 0.15s;
-    }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.06); border: 1px solid var(--border2); color: var(--text); font-size: 15px; font-weight: 500; padding: 12px 28px; border-radius: 99px; transition: background 0.2s, transform 0.15s; }
     .btn-secondary:hover { background: rgba(255,255,255,0.1); transform: translateY(-1px); }
 
     /* STATS */
-    .stats {
-      display: flex; justify-content: center; flex-wrap: wrap;
-      gap: 2rem; padding: 3rem 1.5rem;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      margin-top: 4rem;
-    }
-
+    .stats { display: flex; justify-content: center; flex-wrap: wrap; gap: 2.5rem; padding: 3rem 1.5rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-top: 4rem; }
     .stat { text-align: center; }
     .stat-num { font-size: 2rem; font-weight: 700; letter-spacing: -1px; color: var(--accent2); }
     .stat-label { font-size: 13px; color: var(--muted); margin-top: 2px; }
 
     /* SECTIONS */
     section { padding: 5rem 1.5rem; max-width: 1100px; margin: 0 auto; }
-
-    .section-label {
-      font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--accent);
-      margin-bottom: 0.75rem;
-    }
-
-    h2 {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 700; letter-spacing: -0.8px;
-      line-height: 1.2; margin-bottom: 1rem;
-    }
-
-    .section-sub {
-      font-size: 1.05rem; color: var(--muted);
-      max-width: 540px; line-height: 1.7;
-      margin-bottom: 3rem;
-    }
+    .section-label { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; letter-spacing: -0.8px; line-height: 1.2; margin-bottom: 1rem; }
+    .section-sub { font-size: 1.05rem; color: var(--muted); max-width: 580px; line-height: 1.75; margin-bottom: 3rem; }
 
     /* CARDS */
     .card-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: background 0.2s, border-color 0.2s;
-    }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: background 0.2s, border-color 0.2s; }
     .card:hover { background: var(--card-hover); border-color: var(--border2); }
-
-    .card-icon {
-      width: 40px; height: 40px; border-radius: var(--radius-sm);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1rem; font-size: 20px;
-    }
-
+    .card-icon { width: 40px; height: 40px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; font-size: 20px; }
     .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 0.5rem; }
-    .card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
-
-    /* HOW IT WORKS */
-    .steps { display: flex; flex-direction: column; gap: 0; }
-
-    .step-item {
-      display: flex; gap: 1.5rem;
-      padding: 2rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .step-item:last-child { border-bottom: none; }
-
-    .step-num {
-      flex-shrink: 0;
-      width: 36px; height: 36px; border-radius: 50%;
-      background: rgba(124,107,255,0.15);
-      border: 1px solid rgba(124,107,255,0.3);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 14px; font-weight: 600; color: var(--accent2);
-    }
-
-    .step-body h3 { font-size: 17px; font-weight: 600; margin-bottom: 0.4rem; }
-    .step-body p { font-size: 14px; color: var(--muted); line-height: 1.7; }
-
-    /* TECH PILLS */
-    .pill-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 2rem; }
-
-    .pill {
-      display: flex; align-items: center; gap: 8px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 99px;
-      padding: 7px 16px;
-      font-size: 13px; font-weight: 500;
-      transition: background 0.2s;
-    }
-    .pill:hover { background: var(--card-hover); }
-
-    .pill-dot { width: 7px; height: 7px; border-radius: 50%; }
+    .card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
 
     /* SPLIT */
     .split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
     @media (max-width: 768px) { .split { grid-template-columns: 1fr; gap: 2rem; } }
 
-    /* CTA */
-    .cta-section {
-      text-align: center;
-      padding: 6rem 1.5rem;
-      background: linear-gradient(180deg, transparent 0%, rgba(124,107,255,0.06) 50%, transparent 100%);
-      border-top: 1px solid var(--border);
-    }
+    /* STEPS */
+    .steps { display: flex; flex-direction: column; }
+    .step-item { display: flex; gap: 1.5rem; padding: 1.75rem 0; border-bottom: 1px solid var(--border); }
+    .step-item:last-child { border-bottom: none; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: rgba(124,107,255,0.15); border: 1px solid rgba(124,107,255,0.3); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; color: var(--accent2); }
+    .step-body h3 { font-size: 17px; font-weight: 600; margin-bottom: 0.4rem; }
+    .step-body p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
+    /* PILLS */
+    .pill-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 2rem; }
+    .pill { display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 99px; padding: 7px 16px; font-size: 13px; font-weight: 500; transition: background 0.2s; }
+    .pill:hover { background: var(--card-hover); }
+    .pill-dot { width: 7px; height: 7px; border-radius: 50%; }
+
+    /* CTA */
+    .cta-section { text-align: center; padding: 6rem 1.5rem; background: linear-gradient(180deg, transparent 0%, rgba(124,107,255,0.06) 50%, transparent 100%); border-top: 1px solid var(--border); }
     .cta-section h2 { margin-bottom: 1rem; }
-    .cta-section p { color: var(--muted); margin-bottom: 2rem; font-size: 1.05rem; }
+    .cta-section p { color: var(--muted); margin-bottom: 2rem; font-size: 1.05rem; max-width: 520px; margin-left: auto; margin-right: auto; }
 
     /* FOOTER */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 1.5rem;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 1rem;
-      max-width: 1100px; margin: 0 auto;
-    }
-
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; max-width: 1100px; margin: 0 auto; }
     footer p { font-size: 13px; color: var(--muted); }
     footer a { font-size: 13px; color: var(--muted); transition: color 0.2s; }
     footer a:hover { color: var(--text); }
 
-    /* HEXAGON LOGO */
-    .hex-logo {
-      display: inline-flex; align-items: center; justify-content: center;
-    }
-
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-      .stats { gap: 1.5rem; }
-    }
+    @media (max-width: 600px) { .nav-links { display: none; } .stats { gap: 1.5rem; } }
   </style>
 </head>
 <body>
@@ -308,35 +116,20 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <svg class="hex-logo" width="28" height="28" viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="60" y1="178" x2="74" y2="148" stroke="#7c6bff" stroke-width="2" opacity="0.55"/>
-      <line x1="74" y1="148" x2="84" y2="117" stroke="#7c6bff" stroke-width="2" opacity="0.6"/>
-      <line x1="84" y1="117" x2="88" y2="84" stroke="#7c6bff" stroke-width="2" opacity="0.7"/>
-      <line x1="88" y1="84" x2="90" y2="50" stroke="#38bdf8" stroke-width="2" opacity="0.8"/>
-      <line x1="74" y1="148" x2="52" y2="139" stroke="#7c6bff" stroke-width="1.2" opacity="0.3"/>
-      <line x1="84" y1="117" x2="106" y2="122" stroke="#7c6bff" stroke-width="1.2" opacity="0.3"/>
-      <circle cx="52" cy="139" r="5" fill="#7c6bff" opacity="0.3"/>
-      <circle cx="106" cy="122" r="5" fill="#7c6bff" opacity="0.3"/>
-      <polygon points="60,194 76,185 76,167 60,158 44,167 44,185" fill="#1a1a2e" stroke="#7c6bff" stroke-width="2"/>
-      <circle cx="60" cy="176" r="7" fill="#7c6bff"/>
-      <polygon points="74,163 88,155 88,139 74,131 60,139 60,155" fill="#1a1a2e" stroke="#7c6bff" stroke-width="2"/>
-      <circle cx="74" cy="147" r="6" fill="#7c6bff" opacity="0.9"/>
-      <polygon points="84,132 96,125 96,111 84,104 72,111 72,125" fill="#1a1a2e" stroke="#8b7bff" stroke-width="2"/>
-      <circle cx="84" cy="118" r="5" fill="#8b7bff"/>
-      <polygon points="88,99 99,93 99,80 88,74 77,80 77,93" fill="#1a1a2e" stroke="#5ab4f0" stroke-width="2"/>
-      <circle cx="88" cy="86" r="4.5" fill="#5ab4f0"/>
-      <polygon points="90,66 103,59 103,44 90,37 77,44 77,59" fill="#0c1a2e" stroke="#38bdf8" stroke-width="2.5"/>
-      <circle cx="90" cy="52" r="5.5" fill="#38bdf8"/>
-      <line x1="90" y1="37" x2="90" y2="18" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
-      <polyline points="84,25 90,17 96,25" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <svg width="32" height="28" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="22" y1="74" x2="38" y2="58" stroke="#7c6bff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+      <line x1="58" y1="48" x2="74" y2="28" stroke="#7c6bff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+      <polygon points="14,68 22,73 22,83 14,88 6,83 6,73" fill="#7c6bff"/>
+      <polygon points="48,38 60,45 60,59 48,66 36,59 36,45" fill="#8b7bff"/>
+      <polygon points="84,14 98,22 98,38 84,46 70,38 70,22" fill="#38bdf8"/>
     </svg>
     BlockLaunch
   </div>
   <div class="nav-links">
     <a href="#mission">Mission</a>
-    <a href="#students">Students</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact" class="nav-cta">Get involved</a>
+    <a href="#how">How it works</a>
+    <a href="#tech">Technology</a>
+    <a href="#contact" class="nav-cta">Apply</a>
   </div>
 </nav>
 
@@ -347,201 +140,192 @@
 
   <div class="badge">
     <div class="badge-dot"></div>
-    Accepting student project proposals
+    Now accepting project proposals
   </div>
 
   <h1>
-    Ship real software.<br/>
-    <span class="grad">Keep your work.</span>
+    Don't just learn to code.<br/>
+    <span class="grad">Build something that matters.</span>
   </h1>
 
   <p class="hero-sub">
-    BlockLaunch sponsors College of the Ozarks students with funded, deliverable-based projects in blockchain and fintech. No summer tradeoffs — build on your schedule, own what you make, and graduate with a GitHub repo that speaks for itself.
+    BlockLaunch is a launchpad for young technology professionals who want to use emerging technologies to solve real problems — and build enterprise-grade software in the process. This is where entrepreneurs are made.
   </p>
 
   <div class="hero-actions">
-    <a href="#students" class="btn-primary">
-      Apply for a project
+    <a href="#how" class="btn-primary">
+      See how it works
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
-    <a href="#mission" class="btn-secondary">Learn more</a>
+    <a href="#mission" class="btn-secondary">Our mission</a>
   </div>
 
   <div class="stats">
     <div class="stat">
       <div class="stat-num">100%</div>
-      <div class="stat-label">IP retained by students</div>
+      <div class="stat-label">You own what you build</div>
     </div>
     <div class="stat">
-      <div class="stat-num">$0</div>
-      <div class="stat-label">Cost to participate</div>
+      <div class="stat-num">Real</div>
+      <div class="stat-label">Enterprise-grade software</div>
     </div>
     <div class="stat">
-      <div class="stat-num">CofO</div>
-      <div class="stat-label">Scholarship administered</div>
+      <div class="stat-num">0</div>
+      <div class="stat-label">Toy projects</div>
     </div>
     <div class="stat">
       <div class="stat-num">Live</div>
-      <div class="stat-label">Public software on graduation</div>
+      <div class="stat-label">Shipped on your GitHub</div>
     </div>
   </div>
 </div>
 
 <!-- MISSION -->
 <section id="mission">
-  <p class="section-label">Our mission</p>
-  <h2>A different kind of internship</h2>
-  <p class="section-sub">
-    The job market for CS graduates has changed. Resumes that mirror job descriptions are filtered by algorithms before a human ever reads them. BlockLaunch exists to change what a graduate brings to the table.
-  </p>
+  <p class="section-label">Why BlockLaunch</p>
+  <h2>The best way to learn is to ship</h2>
+  <p class="section-sub">The technology landscape is shifting fast. AI is automating the routine. What remains — and what employers actually want — are builders who can identify a real problem, choose the right technology, and deliver working software. BlockLaunch exists to create those builders.</p>
 
   <div class="card-grid">
     <div class="card">
-      <div class="card-icon" style="background: rgba(124,107,255,0.12);">🎓</div>
-      <h3>Built for CofO students</h3>
-      <p>College of the Ozarks students work through the summer to cover room and board. Traditional internships aren't financially viable. BlockLaunch pays for deliverables — on your schedule, around your job.</p>
+      <div class="card-icon" style="background: rgba(124,107,255,0.12);">🚀</div>
+      <h3>Entrepreneurial mindset first</h3>
+      <p>Every project starts with a problem worth solving — not a spec handed down from above. You define the opportunity, architect the solution, and own the outcome. That's the skill that separates builders from coders.</p>
     </div>
     <div class="card">
-      <div class="card-icon" style="background: rgba(56,189,248,0.12);">🔗</div>
-      <h3>Real blockchain projects</h3>
-      <p>Work on stablecoins, tokenized deposits, DeFi protocols, and financial infrastructure — the same problems being solved at the frontier of fintech. Not toy apps. Actual software.</p>
+      <div class="card-icon" style="background: rgba(56,189,248,0.12);">⛓️</div>
+      <h3>Emerging technology, real stakes</h3>
+      <p>Blockchain, stablecoins, tokenized assets, AI-powered fintech — these aren't buzzwords here. They're the substrate of the next generation of financial infrastructure. You'll work on them for real.</p>
     </div>
     <div class="card">
-      <div class="card-icon" style="background: rgba(52,211,153,0.12);">⚡</div>
-      <h3>Your IP, always</h3>
-      <p>Everything you build belongs to you. BlockLaunch gets a license to use it, but you can publish it, open-source it, license it, and put it on your resume the day you finish.</p>
+      <div class="card-icon" style="background: rgba(52,211,153,0.12);">🏗️</div>
+      <h3>Enterprise-grade from day one</h3>
+      <p>No tutorial apps. No throwaway code. BlockLaunch projects are built with modern tooling, proper architecture, CI/CD, cloud infrastructure, and test coverage — the same standards used at companies that matter.</p>
     </div>
     <div class="card">
-      <div class="card-icon" style="background: rgba(251,191,36,0.12);">💳</div>
-      <h3>Scholarship, not payroll</h3>
-      <p>Compensation is structured as a restricted scholarship through College of the Ozarks — no W-2, no employment paperwork, no summer tradeoffs. The college handles disbursement.</p>
+      <div class="card-icon" style="background: rgba(251,191,36,0.12);">🔑</div>
+      <h3>You keep your IP</h3>
+      <p>Everything you build belongs to you. Publish it, open-source it, license it, or build a company on top of it. BlockLaunch gets a license to use it — you get a portfolio piece that's entirely yours.</p>
     </div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section id="students" style="background: var(--bg2); max-width: 100%; padding: 5rem 1.5rem;">
+<section id="how" style="background: var(--bg2); max-width: 100%; padding: 5rem 1.5rem;">
   <div style="max-width: 1100px; margin: 0 auto;">
-    <p class="section-label">For students</p>
+    <p class="section-label">How it works</p>
     <div class="split">
       <div>
-        <h2>How it works</h2>
-        <p class="section-sub">From proposal to shipped software in one summer — without leaving your campus job.</p>
+        <h2>From idea to shipped software</h2>
+        <p class="section-sub">BlockLaunch is structured around deliverables, not hours. You set your own schedule and work at your own pace — what matters is that you ship.</p>
       </div>
       <div class="steps">
         <div class="step-item">
           <div class="step-num">1</div>
           <div class="step-body">
-            <h3>Submit a project proposal</h3>
-            <p>Propose a blockchain or fintech project, or choose from BlockLaunch's open project briefs. We'll scope it together into clear, achievable deliverables.</p>
+            <h3>Identify a problem worth solving</h3>
+            <p>Propose a project or choose from open BlockLaunch briefs. Every project must address a real gap — something that exists better or differently than what's currently available. We'll scope it into clear, achievable deliverables together.</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">2</div>
           <div class="step-body">
             <h3>Get sponsored</h3>
-            <p>BlockLaunch funds the scholarship through CofO. You receive support to cover the financial gap left by not taking a traditional summer job.</p>
+            <p>Accepted projects receive funding to cover your time. Compensation is structured to remove financial barriers — so you can focus on building without compromise.</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">3</div>
           <div class="step-body">
-            <h3>Build on your schedule</h3>
-            <p>Work on deliverables around your campus job — evenings, weekends, whenever. No office hours, no time tracking. Ship the thing, that's all that matters.</p>
+            <h3>Build with modern tools</h3>
+            <p>You'll work with a real tech stack — cloud infrastructure, blockchain protocols, modern frameworks, and AI tooling. BlockLaunch provides mentorship, access to tooling, and a collaborative environment to help you level up fast.</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-num">4</div>
           <div class="step-body">
-            <h3>Graduate with a portfolio</h3>
-            <p>Your finished project is public on GitHub under your name. A live URL, real code, modern tech. That's your resume now.</p>
+            <h3>Ship it publicly</h3>
+            <p>Your finished project is live, public, and yours. A GitHub repo with real code, a deployed product with a real URL, and professional experience at BlockLaunch LLC on your resume — that's how you stand out.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME SECTION -->
+<section style="max-width: 1100px; margin: 0 auto; padding: 5rem 1.5rem;">
+  <p class="section-label">Your career</p>
+  <div class="split">
+    <div>
+      <h2>A resume that speaks for itself</h2>
+      <p class="section-sub">Resumes that mirror job descriptions are filtered by algorithms before a human ever reads them. A GitHub link to live, enterprise-grade software you built and own is a different conversation entirely.</p>
+      <a href="#contact" class="btn-primary" style="display: inline-flex;">Apply for a project
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div>
+      <!-- Resume card -->
+      <div style="background: #0f0f1e; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.75rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
+          <div>
+            <p style="font-size: 15px; font-weight: 600; color: #e8e8f0; margin: 0;">Software Developer — Contract</p>
+            <p style="font-size: 14px; color: var(--accent2); margin: 2px 0 0;">BlockLaunch LLC</p>
+          </div>
+          <p style="font-size: 12px; color: var(--muted); white-space: nowrap; margin: 3px 0 0;">May – Aug 2026</p>
+        </div>
+        <ul style="margin: 10px 0 0 1rem; padding: 0; list-style: disc;">
+          <li style="font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 4px;">Built a tokenized deposit prototype on Ethereum using Solidity and Hardhat, integrated with a React frontend deployed on GCP Cloud Run</li>
+          <li style="font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 4px;">Implemented ERC-20 compliant smart contracts with full test coverage via Foundry</li>
+          <li style="font-size: 13px; color: var(--muted); line-height: 1.7;">Open-source: <span style="color: var(--accent3);">github.com/blocklaunch-io/tokenized-deposit</span></li>
+        </ul>
+        <div style="border-top: 1px solid rgba(255,255,255,0.07); margin: 1.25rem 0;"></div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="#8888a8"/></svg>
+          <p style="font-size: 13px; color: var(--muted); margin: 0;">Public repo · Live demo · Professional reference provided</p>
+        </div>
+      </div>
+      <div style="margin-top: 1rem; padding: 1rem 1.25rem; background: rgba(124,107,255,0.08); border: 1px solid rgba(124,107,255,0.2); border-radius: 10px;">
+        <p style="font-size: 13px; color: var(--accent2); font-weight: 500; margin: 0 0 4px;">BlockLaunch provides professional references</p>
+        <p style="font-size: 13px; color: var(--muted); margin: 0;">Every developer who completes a project deliverable can list BlockLaunch LLC as work experience and request a reference letter.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- TECH -->
-<section id="projects">
-  <p class="section-label">Technology focus</p>
-  <h2>What we're building</h2>
-  <p class="section-sub">
-    BlockLaunch explores the intersection of blockchain infrastructure and everyday financial products — the same space community banks and credit unions are navigating right now.
-  </p>
-
-  <div class="card-grid">
-    <div class="card">
-      <h3>Stablecoins & tokenized deposits</h3>
-      <p>How do community financial institutions participate in on-chain settlement? Projects explore the rails being built between traditional banking and blockchain networks.</p>
-    </div>
-    <div class="card">
-      <h3>DeFi protocol integration</h3>
-      <p>Building consumer-facing interfaces on top of existing DeFi infrastructure — lending, liquidity, cross-chain bridging — with an emphasis on real utility over speculation.</p>
-    </div>
-    <div class="card">
-      <h3>Financial tooling & APIs</h3>
-      <p>Modernizing the interfaces that community banks use to manage accounts, payments, and reporting — applying modern API design and cloud infrastructure to legacy systems.</p>
-    </div>
-  </div>
-
-  <div class="pill-grid">
-    <div class="pill"><div class="pill-dot" style="background: #627eea;"></div>Ethereum</div>
-    <div class="pill"><div class="pill-dot" style="background: #9945ff;"></div>Solana</div>
-    <div class="pill"><div class="pill-dot" style="background: #f0b90b;"></div>BNB Chain</div>
-    <div class="pill"><div class="pill-dot" style="background: #e84142;"></div>Avalanche</div>
-    <div class="pill"><div class="pill-dot" style="background: #2775ca;"></div>USDC / Circle</div>
-    <div class="pill"><div class="pill-dot" style="background: #26a17b;"></div>USDT / Tether</div>
-    <div class="pill"><div class="pill-dot" style="background: #38bdf8;"></div>GCP / Cloud Run</div>
-    <div class="pill"><div class="pill-dot" style="background: #a78bfa;"></div>Solidity</div>
-    <div class="pill"><div class="pill-dot" style="background: #34d399;"></div>TypeScript</div>
-    <div class="pill"><div class="pill-dot" style="background: #fb923c;"></div>Rust</div>
-  </div>
-</section>
-
-<!-- RESUME SECTION -->
-<section style="background: var(--bg2); max-width: 100%; padding: 5rem 1.5rem;">
+<section id="tech" style="background: var(--bg2); max-width: 100%; padding: 5rem 1.5rem;">
   <div style="max-width: 1100px; margin: 0 auto;">
-    <p class="section-label">Your career</p>
-    <div class="split">
-      <div>
-        <h2>Real work experience.<br/>On your resume.</h2>
-        <p class="section-sub">A BlockLaunch project isn't a school assignment. It's a professional engagement with a real LLC — and it belongs on your resume exactly like that.</p>
-        <a href="#contact" class="btn-primary" style="display: inline-flex;">Apply for a project
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-      <div>
-        <!-- Resume card -->
-        <div style="background: #0f0f1e; border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.75rem; font-family: -apple-system, sans-serif;">
-          <!-- Experience entry -->
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.25rem;">
-            <div>
-              <p style="font-size: 15px; font-weight: 600; color: #e8e8f0; margin: 0;">Software Developer — Contract</p>
-              <p style="font-size: 14px; color: var(--accent2); margin: 2px 0 0;">BlockLaunch LLC</p>
-            </div>
-            <p style="font-size: 12px; color: var(--muted); white-space: nowrap; margin: 3px 0 0;">May – Aug 2026</p>
-          </div>
-          <ul style="margin: 10px 0 0 1rem; padding: 0; list-style: disc;">
-            <li style="font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 4px;">Built a tokenized deposit prototype on Ethereum using Solidity and Hardhat, integrated with a React frontend deployed on GCP Cloud Run</li>
-            <li style="font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 4px;">Implemented ERC-20 compliant smart contracts with full test coverage via Foundry</li>
-            <li style="font-size: 13px; color: var(--muted); line-height: 1.7;">Open-source repo: <span style="color: var(--accent3);">github.com/blocklaunch-io/tokenized-deposit</span></li>
-          </ul>
-          <!-- Divider -->
-          <div style="border-top: 1px solid rgba(255,255,255,0.07); margin: 1.25rem 0;"></div>
-          <!-- GitHub link mock -->
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="#8888a8"/></svg>
-            <p style="font-size: 13px; color: var(--muted); margin: 0;">Public repo · Live demo · Available as a portfolio reference</p>
-          </div>
-        </div>
+    <p class="section-label">Technology focus</p>
+    <h2>The stack of what's next</h2>
+    <p class="section-sub">BlockLaunch projects sit at the intersection of blockchain infrastructure and real-world financial products — one of the most technically demanding and opportunity-rich areas in software today.</p>
 
-        <!-- Reference note -->
-        <div style="margin-top: 1rem; padding: 1rem 1.25rem; background: rgba(124,107,255,0.08); border: 1px solid rgba(124,107,255,0.2); border-radius: 10px;">
-          <p style="font-size: 13px; color: var(--accent2); font-weight: 500; margin: 0 0 4px;">BlockLaunch provides references</p>
-          <p style="font-size: 13px; color: var(--muted); margin: 0;">Every student who completes a project deliverable is encouraged to list BlockLaunch LLC on their resume and can request a professional reference letter.</p>
-        </div>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Stablecoins & tokenized deposits</h3>
+        <p>How do financial institutions participate in on-chain settlement? Projects explore the infrastructure connecting traditional banking and blockchain networks — one of the most active areas in fintech.</p>
       </div>
+      <div class="card">
+        <h3>DeFi protocol integration</h3>
+        <p>Building consumer-facing products on top of existing DeFi infrastructure — lending, liquidity, cross-chain bridging — with an emphasis on real utility and enterprise-grade reliability.</p>
+      </div>
+      <div class="card">
+        <h3>AI-powered financial tooling</h3>
+        <p>Applying large language models and modern AI tooling to financial workflows — from intelligent contract analysis to automated reporting and anomaly detection in transaction data.</p>
+      </div>
+    </div>
+
+    <div class="pill-grid">
+      <div class="pill"><div class="pill-dot" style="background:#627eea;"></div>Ethereum</div>
+      <div class="pill"><div class="pill-dot" style="background:#9945ff;"></div>Solana</div>
+      <div class="pill"><div class="pill-dot" style="background:#e84142;"></div>Avalanche</div>
+      <div class="pill"><div class="pill-dot" style="background:#2775ca;"></div>USDC / Circle</div>
+      <div class="pill"><div class="pill-dot" style="background:#38bdf8;"></div>GCP / Cloud Run</div>
+      <div class="pill"><div class="pill-dot" style="background:#a78bfa;"></div>Solidity</div>
+      <div class="pill"><div class="pill-dot" style="background:#34d399;"></div>TypeScript</div>
+      <div class="pill"><div class="pill-dot" style="background:#fb923c;"></div>Rust</div>
+      <div class="pill"><div class="pill-dot" style="background:#60a5fa;"></div>React</div>
+      <div class="pill"><div class="pill-dot" style="background:#f472b6;"></div>Claude API</div>
     </div>
   </div>
 </section>
@@ -550,9 +334,9 @@
 <div class="cta-section" id="contact">
   <p class="section-label" style="text-align:center;">Get involved</p>
   <h2>Ready to build something real?</h2>
-  <p>Whether you're a CofO student looking for a project or a developer interested in collaborating, we'd love to hear from you.</p>
+  <p>If you're a young developer who wants to do more than follow tutorials — who wants to identify a problem, pick the right technology, and ship something that didn't exist before — BlockLaunch is for you.</p>
   <a href="mailto:hello@blocklaunch.io" class="btn-primary" style="display: inline-flex; margin: 0 auto;">
-    Reach out
+    Apply for a project
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
 </div>
@@ -560,8 +344,14 @@
 <!-- FOOTER -->
 <footer>
   <div style="display:flex; align-items:center; gap:10px;">
-    <svg width="20" height="20" viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="178" x2="74" y2="148" stroke="#7c6bff" stroke-width="2" opacity="0.55"/><line x1="74" y1="148" x2="84" y2="117" stroke="#7c6bff" stroke-width="2" opacity="0.6"/><line x1="84" y1="117" x2="88" y2="84" stroke="#7c6bff" stroke-width="2" opacity="0.7"/><line x1="88" y1="84" x2="90" y2="50" stroke="#38bdf8" stroke-width="2" opacity="0.8"/><polygon points="60,194 76,185 76,167 60,158 44,167 44,185" fill="#1a1a2e" stroke="#7c6bff" stroke-width="2"/><circle cx="60" cy="176" r="7" fill="#7c6bff"/><polygon points="74,163 88,155 88,139 74,131 60,139 60,155" fill="#1a1a2e" stroke="#7c6bff" stroke-width="2"/><circle cx="74" cy="147" r="6" fill="#7c6bff"/><polygon points="84,132 96,125 96,111 84,104 72,111 72,125" fill="#1a1a2e" stroke="#8b7bff" stroke-width="2"/><circle cx="84" cy="118" r="5" fill="#8b7bff"/><polygon points="88,99 99,93 99,80 88,74 77,80 77,93" fill="#1a1a2e" stroke="#5ab4f0" stroke-width="2"/><circle cx="88" cy="86" r="4.5" fill="#5ab4f0"/><polygon points="90,66 103,59 103,44 90,37 77,44 77,59" fill="#0c1a2e" stroke="#38bdf8" stroke-width="2.5"/><circle cx="90" cy="52" r="5.5" fill="#38bdf8"/><line x1="90" y1="37" x2="90" y2="18" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/><polyline points="84,25 90,17 96,25" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>
-    <p>© 2025 BlockLaunch LLC · Springfield, MO</p>
+    <svg width="24" height="20" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="22" y1="74" x2="38" y2="58" stroke="#7c6bff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+      <line x1="58" y1="48" x2="74" y2="28" stroke="#7c6bff" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+      <polygon points="14,68 22,73 22,83 14,88 6,83 6,73" fill="#7c6bff"/>
+      <polygon points="48,38 60,45 60,59 48,66 36,59 36,45" fill="#8b7bff"/>
+      <polygon points="84,14 98,22 98,38 84,46 70,38 70,22" fill="#38bdf8"/>
+    </svg>
+    <p>© 2026 BlockLaunch LLC · Springfield, MO</p>
   </div>
   <div style="display:flex; gap:1.5rem;">
     <a href="mailto:hello@blocklaunch.io">Contact</a>
